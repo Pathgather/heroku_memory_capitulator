@@ -1,14 +1,9 @@
 
-# rails_new &nbsp; [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Save%20hours%20of%20your%E2%8F%B1%EF%B8%8F%20with%20this%20template%20for%20building%20modern%20%23Rails%20apps%20%F0%9F%92%AF%F0%9F%94%A5%20&url=https://github.com/lockstep/rails_new&via=locksteplabs&hashtags=rubyonrails)
+# Heroku Memory Capitulator
 
-![Build Status](https://circleci.com/gh/lockstep/rails_new.svg?style=shield)
+Restart your Heroku application based on Heroku errors (e.g R14) indicating
+the app is in dire need of a restart.
 
-A thoughtfully designed template for building modern Rails apps 🔥
-
-Get started on your new app within minutes instead of hours 🚗💨
-
-- [Getting started](#getting-started)
-- [Optional configuration options](#optional-configuration-options)
 - [Environment variables](#environment-variables)
 - [Contents](#contents)
   - [Base system](#base-system)
@@ -24,40 +19,6 @@ Get started on your new app within minutes instead of hours 🚗💨
   - [Gemfile.dev / Gemfile.dev.lock](#gemfiledev---gemfiledevlock)
   - [`Rack::RejectTrace` middleware](#rack--rejecttrace-middleware)
   - [Favicons](#favicons)
-
-## Getting started
-
-To get going clone this repository and perform the following steps:
-
-1. Run `rails credentials:edit` to re-generate `config/master.key` and create
-   `config/credentials.yml.enc`.
-1. You can now run `bin/configure`, which will help you in configuring the template.
-
-As an alternative to running the script you can perform all of the following steps manually.
-
-1. Change application name in `config/application.rb`.
-1. Update `database.yml` to reflect the new application name.
-1. Update `TODO` items in `config/environments/production.rb`.
-1. If you plan on using Figaro, copy `config/application.yml.example` to `config/application.yml`.
-1. ESLint is preconfigured for modern JS with React support ([AirBnB styleguide](https://github.com/airbnb/javascript)).
-   If you want to use it install packages with `npm install` / `yarn [install]`, otherwise remove
-   `.eslintrc` and `package.json`.
-1. If you don't plan on tracking the template, you can remove the remote, otherwise rename it and
-   add your new remote as appropriate.:
-   ```shell
-   $ git remote rename origin rails_new
-   $ git remote add origin ...
-   ```
-
-## Optional configuration options
-
-* If you want to use [AirBrake](https://airbrake.io), make sure the following 2 environment
-  variables are set:
-    * `AIRBRAKE_PROJECT_ID`
-    * `AIRBRAKE_API_KEY`
-* [New Relic](https://newrelic.com) is pre configured in `config/newrelic.yml`, but you need to
-  comment in the environment variables for it work on Heroku (lines 10 and 17).
-* The app is preconfigured for Google Analytics, just add `GOOGLE_ANALYTICS_ID` to the environment.
 
 ## Environment variables
 
