@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # TODO: Add root route as needed/necessary
-  # unauthenticated :user do
-  #   root to: 'static_pages#landing'
-  # end
+  resources :heroku_applications, only: %i[] do
+    resources :restarts, only: %i[create]
+  end
 end

@@ -11,6 +11,12 @@ end
 version_file = File.join(File.dirname(__FILE__), '.ruby-version')
 ruby File.read(version_file).strip
 
+# Interface with Heroku apps
+gem 'platform-api'
+
+# Store encrypted data
+gem "attr_encrypted", "~> 3.0.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 
