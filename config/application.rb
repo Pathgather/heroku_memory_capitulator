@@ -9,7 +9,7 @@ require_relative '../lib/rack/reject_trace'
 Bundler.require(*Rails.groups)
 
 # TODO: Change module name to the actual project name
-module RailsNew
+module HerokuMemoryCapitulator
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2

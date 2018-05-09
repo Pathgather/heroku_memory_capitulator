@@ -1,5 +1,5 @@
 {
-  "name": "rails_new",
+  "name": "heroku_memory_capitulator",
   "private": true,
   "engines": {
     "node": ">=6.0.0 <10",

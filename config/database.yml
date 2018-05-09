@@ -24,13 +24,13 @@ default: &default
 development:
   <<: *default
   # TODO: Change database name
-  database: rails_new_development
+  database: heroku_memory_capitulator_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: rails_new
+  #username: heroku_memory_capitulator
 
   # The password associated with the postgres role (username).
   #password:
@@ -59,7 +59,7 @@ development:
 test:
   <<: *default
   # TODO: Change database name
-  database: rails_new_test
+  database: heroku_memory_capitulator_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
