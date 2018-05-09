@@ -51,7 +51,6 @@ All of the following have been installed and pre-configured:
 
 ### General
 
-* [devise](https://github.com/plataformatec/devise)
 * [figaro](https://github.com/laserlemon/figaro)
 * [foreman](https://github.com/ddollar/foreman)
 * [fast_jsonapi](https://github.com/Netflix/fast_jsonapi)
