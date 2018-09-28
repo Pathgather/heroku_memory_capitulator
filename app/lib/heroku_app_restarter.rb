@@ -1,9 +1,11 @@
 module HerokuAppRestarter
   def self.restart!(heroku_application, payload)
-    return if heroku_application.restarts_disabled?
-    heroku_application.restarts.create!(restarted_at: Time.now)
+    dyno_name = dyno_name_from(payload)
+    return if heroku_application.restarts_disabled?(dyno_name)
+
+    heroku_application.restarts.create!(dyno_name: dyno_name)
     heroku = PlatformAPI.connect_oauth(heroku_application.oauth_token)
-    heroku.dyno.restart(heroku_application.name, dyno_name_from(payload))
+    heroku.dyno.restart(heroku_application.name, dyno_name)
   end
 
   # receives payload as JSON

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_28_073129) do
+ActiveRecord::Schema.define(version: 2018_09_28_080838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_09_28_073129) do
 
   create_table "restarts", force: :cascade do |t|
     t.uuid "heroku_application_id"
-    t.datetime "restarted_at"
+    t.datetime "restarted_at", default: -> { "now()" }
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "dyno_name"

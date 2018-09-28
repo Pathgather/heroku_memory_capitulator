@@ -23,7 +23,7 @@ describe HerokuAppRestarter do
     context 'a restart is triggered within the predefined grace period' do
       before do
         create(:restart, heroku_application: @heroku_application,
-               restarted_at: 1.minute.ago)
+               restarted_at: 1.minute.ago, dyno_name: 'web.2')
       end
       it 'does NOT initiate the restart' do
         HerokuAppRestarter.restart!(@heroku_application, @payload)
@@ -34,11 +34,14 @@ describe HerokuAppRestarter do
     context 'a restart is triggered after the grace period has ended' do
       before do
         create(:restart, heroku_application: @heroku_application,
-               restarted_at: 1.hour.ago)
+               restarted_at: 1.hour.ago, dyno_name: 'web.6')
       end
       it 'initiates the restart' do
         HerokuAppRestarter.restart!(@heroku_application, @payload)
         expect(@heroku_application.restarts.count).to eq 2
+
+        restart = @heroku_application.restarts.last
+        expect(restart.dyno_name).to eq 'web.2'
       end
     end
   end
