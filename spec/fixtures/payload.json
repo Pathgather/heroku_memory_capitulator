@@ -1,0 +1,27 @@
+{
+  "events": [
+    {
+      "id": 7711561783320576,
+      "received_at": "2011-05-18T20:30:02-07:00",
+      "display_received_at": "May 18 20:30:02",
+      "source_ip": "208.75.57.121",
+      "source_name": "abc",
+      "source_id": 2,
+      "hostname": "abc",
+      "program": "heroku/web.2",
+      "severity": "Notice",
+      "facility": "Cron",
+      "message": "message body"
+    }
+  ],
+  "saved_search": {
+    "id": 42,
+    "name": "Production - R14 Web Memory Exceeded",
+    "query": "Error R14 (Memory quota exceeded)",
+    "html_edit_url": "https://papertrailapp.com/searches/42/edit",
+    "html_search_url": "https://papertrailapp.com/searches/42"
+  },
+  "max_id": 7711582041804800,
+  "min_id": 7711561783320576,
+  "frequency": "1 minute"
+}

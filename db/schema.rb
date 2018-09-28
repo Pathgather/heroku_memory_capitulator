@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_09_213013) do
+ActiveRecord::Schema.define(version: 2018_09_28_073129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2018_05_09_213013) do
     t.datetime "restarted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "dyno_name"
+    t.index ["dyno_name"], name: "index_restarts_on_dyno_name"
     t.index ["heroku_application_id"], name: "index_restarts_on_heroku_application_id"
   end
 
